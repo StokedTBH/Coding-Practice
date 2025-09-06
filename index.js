@@ -4,9 +4,6 @@
 //window.alert(`This is an alert!`);
 //window.alert(`This is another alert!`);
 
-document.getElementById("header_number_one").textContent = `Hello, World`;
-document.getElementById("paragraph_number_one").textContent = `I like coding!`;
-
 let x = 100;
 let y;
 y = 200;
@@ -48,3 +45,22 @@ document.getElementById("paragraph_number_one").textContent = `${firstName} ${la
 Strings, numbers (ints and demcimal numbers 
 all included), booleans
 */
+
+// Affecting age. Rules of PEMDAS apply
+let doubleAge = age * 2;
+let halfAge = age / 2;
+let evenOrOdd = age % 2;
+
+console.log(doubleAge);
+console.log(halfAge);
+console.log(evenOrOdd);
+
+age += 12;
+console.log(`I will hopefully retire by age ${age}.`);
+age++;
+console.log(`I will be ${age} years old after 1 year of retirement.`);
+
+let username;
+username = window.prompt("What is your username?");
+
+console.log(username);
