@@ -1,32 +1,22 @@
-const PI = 3.14159;
+// Each button is assigned to a variable
+const decreaseBtn = document.getElementById("decreaseBtn");
+const resetBtn = document.getElementById("resetBtn");
+const increaseBtn = document.getElementById("increaseBtn");
+const countLabel = document.getElementById("countLabel");
 
-let username;
-let age;
-let radius;
-let circumference;
+let count = 0;
 
-radius = window.prompt(`Enterthe radius of a circle.`);
-radius = Number(radius);
+increaseBtn.onclick = function() {
+    count++;
+    countLabel.textContent = count;
+}
 
-circumference = 2 * PI * radius;
+resetBtn.onclick = function() {
+    count = 0;
+    countLabel.textContent = count;
+}
 
-console.log(circumference);
-
-
-document.getElementById("submitUsername").onclick = function(){
-    username = document.getElementById("myUsernameText").value;
-    console.log(username);
-};
-
-document.getElementById("submitAge").onclick = function(){
-    age = document.getElementById("myAgeText").value;
-    age = Number(age) + 1;
-    console.log(age);
-};
-
-document.getElementById("submitRadius").onclick = function(){
-    radius = document.getElementById("myRadiusText").value;
-    circumference = 2 * PI * radius;
-    document.getElementById("circumferenceText").textContent = "Your circumference is: ";
-    document.getElementById("secondCircumference").textContent = circumference;
-};
+decreaseBtn.onclick = function() {
+    count--;
+    countLabel.textContent = count;
+}
