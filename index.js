@@ -1,22 +1,45 @@
-// Each button is assigned to a variable
-const decreaseBtn = document.getElementById("decreaseBtn");
-const resetBtn = document.getElementById("resetBtn");
-const increaseBtn = document.getElementById("increaseBtn");
-const countLabel = document.getElementById("countLabel");
+// Some Math Object Work
 
-let count = 0;
+console.log(Math.PI);
+console.log(Math.E);
 
-increaseBtn.onclick = function() {
-    count++;
-    countLabel.textContent = count;
-}
+let x = 3.21;
+let y = 2;
+let z;
 
-resetBtn.onclick = function() {
-    count = 0;
-    countLabel.textContent = count;
-}
+z = Math.round(x);
+console.log(z);
+z = Math.floor(x);
+console.log(z);
+z = Math.ceil(x);
+console.log(z);
+z = Math.trunc(x);
+console.log(z);
+z = Math.pow(x, y);
+console.log(z);
+z = Math.sqrt(x);
+console.log(z);
+z = Math.log(x);
+console.log(z);
+z = Math.abs(x);
+console.log(z);
 
-decreaseBtn.onclick = function() {
-    count--;
-    countLabel.textContent = count;
-}
+// Gives the sign (-1 if negative & 1 if positive)
+z = Math.sign(x)
+console.log(z);
+
+// Gets maximum and minimum values of selected numbers
+z = Math.max(x, y, z);
+console.log(z);
+z = Math.min(x, y, z);
+console.log(z);
+
+// Takes as radians
+z = Math.sin(x)
+console.log(z);
+z = Math.cos(x)
+console.log(z);
+z = Math.tan(x)
+console.log(z);
+
+
