@@ -1,45 +1,24 @@
-// Some Math Object Work
+const MIN = 1;
+const MAX = 6;
+const myButton = document.getElementById("myButton");
+const myLabel1 = document.getElementById("myLabel1");
+const myLabel2 = document.getElementById("myLabel2");
+const myLabel3 = document.getElementById("myLabel3");
+const totalLabel = document.getElementById("totalLabel");
 
-console.log(Math.PI);
-console.log(Math.E);
+let randomNum1;
+let randomNum2;
+let randomNum3;
+let totalNumber
 
-let x = 3.21;
-let y = 2;
-let z;
-
-z = Math.round(x);
-console.log(z);
-z = Math.floor(x);
-console.log(z);
-z = Math.ceil(x);
-console.log(z);
-z = Math.trunc(x);
-console.log(z);
-z = Math.pow(x, y);
-console.log(z);
-z = Math.sqrt(x);
-console.log(z);
-z = Math.log(x);
-console.log(z);
-z = Math.abs(x);
-console.log(z);
-
-// Gives the sign (-1 if negative & 1 if positive)
-z = Math.sign(x)
-console.log(z);
-
-// Gets maximum and minimum values of selected numbers
-z = Math.max(x, y, z);
-console.log(z);
-z = Math.min(x, y, z);
-console.log(z);
-
-// Takes as radians
-z = Math.sin(x)
-console.log(z);
-z = Math.cos(x)
-console.log(z);
-z = Math.tan(x)
-console.log(z);
-
-
+myButton.onclick = function() {
+    randomNum1 = Math.floor(Math.random() * MAX) + MIN;
+    randomNum2 = Math.floor(Math.random() * MAX) + MIN;
+    randomNum3 = Math.floor(Math.random() * MAX) + MIN;
+    myLabel1.textContent = randomNum1;
+    myLabel2.textContent = randomNum2;
+    myLabel3.textContent = randomNum3;
+    totalNumber = randomNum1 + randomNum2 + randomNum3;
+    totalLabel.style.display = 'inline-block';
+    totalLabel.textContent = "Total = " + totalNumber;
+}
