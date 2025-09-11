@@ -1,24 +1,55 @@
-const MIN = 1;
-const MAX = 6;
-const myButton = document.getElementById("myButton");
-const myLabel1 = document.getElementById("myLabel1");
-const myLabel2 = document.getElementById("myLabel2");
-const myLabel3 = document.getElementById("myLabel3");
-const totalLabel = document.getElementById("totalLabel");
+const myText = document.getElementById("myText");
+const submitButton = document.getElementById("mySubmit");
+const resultText = document.getElementById("resultText");
+let age;
 
-let randomNum1;
-let randomNum2;
-let randomNum3;
-let totalNumber
+submitButton.onclick = function() {
+    age = Number(myText.value);
 
-myButton.onclick = function() {
-    randomNum1 = Math.floor(Math.random() * MAX) + MIN;
-    randomNum2 = Math.floor(Math.random() * MAX) + MIN;
-    randomNum3 = Math.floor(Math.random() * MAX) + MIN;
-    myLabel1.textContent = randomNum1;
-    myLabel2.textContent = randomNum2;
-    myLabel3.textContent = randomNum3;
-    totalNumber = randomNum1 + randomNum2 + randomNum3;
-    totalLabel.style.display = 'inline-block';
-    totalLabel.textContent = "Total = " + totalNumber;
+    if (age > 100) {
+        resultText.textContent = "You are too old to enter this site.";
+    } else if (age < 0) {
+        resultText.textContent = "That's impossible. Your age can't be below 0.";
+    } else if (age == 0) {
+        resultText.textContent = "You can't enter. You were just born.";
+    } else if (age >= 18) {
+        resultText.textContent = "You are old enough to enter this site.";
+    } else {
+        resultText.textContent = "You must be 18+ to enter this site.";
+    }
 }
+
+/*
+Code from elsewhere. Pay no mind. :)
+
+let time = 19;
+    if (time < 12) {
+        console.log("Good morning!");
+    } else if (time >= 12 & time < 18) {
+        console.log("Good afternoon!");
+    } else {
+        console.log("Good evening!");
+    }
+
+    let isStudent = false;
+    if (isStudent) {
+        console.log("You are a student.");
+    } else {
+        console.log("You are not a student.");
+    }
+
+    age = 17;
+    let hasLicense = false;
+
+    if (age >= 16) {
+        console.log("You are old enough to drive.");
+
+        if (hasLicense) {
+            console.log("You have your license.");
+        } else {
+            console.log("You do not have your license yet.");
+        }
+    } else {
+        console.log("You must be 16+ to drive.");
+    }
+*/
