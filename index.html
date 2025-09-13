@@ -7,11 +7,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <label id="myLabel">What is your age? </label>
+    <div id="gender">
+        <input type="checkbox" id="maleCheckBox">
+        <label for="maleCheckBox">Male</label>
+        <input type="checkbox" id="femaleCheckBox">
+        <label for="femaleCheckBox">Female</label>
+    </div>
+
     <br>
-    <input type="text" id="myText">
+
+    <div id="ethnicity">
+        <div class="ethnicity">
+            <input type="radio" id="whiteCaucasian" name="ethnicity">
+            <label for="hispanicLatino">White/Caucasian</label>
+        </div>
+        <div class="ethnicity">
+            <input type="radio" id="hispanicLatino" name="ethnicity">
+            <label for="hispanicLatino">Hispanic/Lantino</label>
+        </div>
+        <div class="ethnicity">
+            <input type="radio" id="blackAfricanAmerican" name="ethnicity">
+            <label for="blackAfricanAmerican">Black/African American</label>
+        </div>
+        <div class="ethnicity">
+            <input type="radio" id="asian" name="ethnicity">
+            <label for="asian">Asian</label>
+        </div>
+    </div>
+
+    <br>
+
     <button type="submit" id="mySubmit">Submit</button>
-    <p id="resultText"></p>
+    <p id="genderResult"></p>
+    <p id="ethnicityResult"></p>
 
     <script src="index.js"></script>
 </body>

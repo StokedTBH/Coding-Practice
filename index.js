@@ -1,55 +1,39 @@
-const myText = document.getElementById("myText");
-const submitButton = document.getElementById("mySubmit");
-const resultText = document.getElementById("resultText");
-let age;
+const maleCheckBox = document.getElementById("maleCheckBox");
+const femaleCheckBox = document.getElementById("femaleCheckBox");
+const whiteButton = document.getElementById("whiteCaucasian");
+const hispanicButton = document.getElementById("hispanicLatino");
+const blackButton = document.getElementById("blackAfricanAmerican");
+const asianButton = document.getElementById("asian");
+const mySubmit = document.getElementById("mySubmit");
+const genderResult = document.getElementById("genderResult");
+const ethnicityResult = document.getElementById("ethnicityResult");
 
-submitButton.onclick = function() {
-    age = Number(myText.value);
+let gender;
+let ethnicity;
 
-    if (age > 100) {
-        resultText.textContent = "You are too old to enter this site.";
-    } else if (age < 0) {
-        resultText.textContent = "That's impossible. Your age can't be below 0.";
-    } else if (age == 0) {
-        resultText.textContent = "You can't enter. You were just born.";
-    } else if (age >= 18) {
-        resultText.textContent = "You are old enough to enter this site.";
+mySubmit.onclick = function() {
+
+    if (maleCheckBox.checked) {
+        gender = "male";
+    } else if (femaleCheckBox.checked) {
+        gender = "male";
     } else {
-        resultText.textContent = "You must be 18+ to enter this site.";
+
     }
+
+    if (whiteButton.checked) {
+
+    } else if (hispanicButton.checked) {
+
+    } else if (blackButton.checked) {
+        
+    } else if (asianButton.checked) {
+        
+    } else {
+
+    }
+
+    genderResult.textContent = "You are a " + gender;
+    ethnicityResult.textContent = "You are " + ethnicity;
+
 }
-
-/*
-Code from elsewhere. Pay no mind. :)
-
-let time = 19;
-    if (time < 12) {
-        console.log("Good morning!");
-    } else if (time >= 12 & time < 18) {
-        console.log("Good afternoon!");
-    } else {
-        console.log("Good evening!");
-    }
-
-    let isStudent = false;
-    if (isStudent) {
-        console.log("You are a student.");
-    } else {
-        console.log("You are not a student.");
-    }
-
-    age = 17;
-    let hasLicense = false;
-
-    if (age >= 16) {
-        console.log("You are old enough to drive.");
-
-        if (hasLicense) {
-            console.log("You have your license.");
-        } else {
-            console.log("You do not have your license yet.");
-        }
-    } else {
-        console.log("You must be 16+ to drive.");
-    }
-*/

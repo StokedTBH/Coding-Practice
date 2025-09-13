@@ -3,7 +3,22 @@ body {
     text-align: center;
 }
 
-#myLabel {
-    display: block;
-    font-size: 2em;
+#gender {
+    text-align: center;
+    display: inline-block;
+    background-color: rgb(203, 195, 195);
+    padding: 4px;
+    border-radius: 8px;
+}
+
+#ethnicity {
+    font-size: 1.1em;
+    display: inline-block;
+    background-color: rgb(162, 162, 162);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#mySubmit {
+    display: inline-block;
 }
